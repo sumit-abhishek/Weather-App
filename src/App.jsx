@@ -17,7 +17,6 @@ function App() {
       <WeatherInput />
       <Button value="Search" onClick={weather.fetchData} />
       <WeatherCard />
-      <Button value="Refresh" />
     </>
   );
 }
