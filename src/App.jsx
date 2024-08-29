@@ -11,9 +11,9 @@ function App() {
   }, []);
   const weather = useWeather();
   return (
-    <div className="flex flex-col items-center">
-      <h1>Weather App</h1>
-      <div className="flex flex-col items-center gap-20 ">
+    <div className="flex flex-col items-center gap-20">
+      <h1 className="font-bold text-5xl">Weather App</h1>
+      <div className="flex flex-col items-center gap-14 ">
         <WeatherInput />
         <WeatherCard />
       </div>
