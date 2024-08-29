@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:5174/Weather-App/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/Weather-App/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./Vite + React_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5174/Weather-App/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite + React</title>
+  <style type="text/css" data-vite-dev-id="C:/Web Development Course/Small Projects/Weather App/src/App.css"></style><style type="text/css" data-vite-dev-id="C:/Web Development Course/Small Projects/Weather App/src/index.css">/*
+! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+.flex {
+  display: flex;
+}
+.h-80 {
+  height: 20rem;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.h-20 {
+  height: 5rem;
+}
+.h-40 {
+  height: 10rem;
+}
+.w-full {
+  width: 100%;
+}
+.w-10 {
+  width: 2.5rem;
+}
+.w-2\/4 {
+  width: 50%;
+}
+.w-20 {
+  width: 5rem;
+}
+.w-40 {
+  width: 10rem;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-20 {
+  gap: 5rem;
+}
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+.rounded-md {
+  border-radius: 0.375rem;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.border-2 {
+  border-width: 2px;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-opacity-5 {
+  --tw-bg-opacity: 0.05;
+}
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+.from-blue-500 {
+  --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-teal-400 {
+  --tw-gradient-from: #2dd4bf var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(45 212 191 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-teal-300 {
+  --tw-gradient-from: #5eead4 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(94 234 212 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-teal-100 {
+  --tw-gradient-from: #ccfbf1 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(204 251 241 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-teal-200 {
+  --tw-gradient-from: #99f6e4 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(153 246 228 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-blue-500 {
+  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
+}
+.to-blue-300 {
+  --tw-gradient-to: #93c5fd var(--tw-gradient-to-position);
+}
+.to-blue-100 {
+  --tw-gradient-to: #dbeafe var(--tw-gradient-to-position);
+}
+.to-blue-200 {
+  --tw-gradient-to: #bfdbfe var(--tw-gradient-to-position);
+}
+.opacity-10 {
+  opacity: 0.1;
+}
+.opacity-0 {
+  opacity: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url(/Weather-App/src/assets/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+</style><style data-emotion="css-global" data-s="">@-webkit-keyframes mui-auto-fill{from{display:block;}}</style><style data-emotion="css-global" data-s="">@keyframes mui-auto-fill{from{display:block;}}</style><style data-emotion="css-global" data-s="">@-webkit-keyframes mui-auto-fill-cancel{from{display:block;}}</style><style data-emotion="css-global" data-s="">@keyframes mui-auto-fill-cancel{from{display:block;}}</style><style data-emotion="css" data-s="">.css-1wtja3v-MuiTextField-root{width:600px;color:black;background-color:white;}</style><style data-emotion="css" data-s="">.css-1wtja3v-MuiTextField-root label.Mui-focused{color:black;}</style><style data-emotion="css" data-s="">.css-1wtja3v-MuiTextField-root .MuiOutlinedInput-root{}</style><style data-emotion="css" data-s="">.css-1wtja3v-MuiTextField-root .MuiOutlinedInput-root.Mui-focused fieldset{border-color:white;color:white;}</style><style data-emotion="css" data-s="">.css-e1ak92-MuiFormControl-root-MuiTextField-root{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:0;padding:0;margin:0;border:0;vertical-align:top;width:600px;color:black;background-color:white;}</style><style data-emotion="css" data-s="">.css-e1ak92-MuiFormControl-root-MuiTextField-root label.Mui-focused{color:black;}</style><style data-emotion="css" data-s="">.css-e1ak92-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root{}</style><style data-emotion="css" data-s="">.css-e1ak92-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root.Mui-focused fieldset{border-color:white;color:white;}</style><style data-emotion="css" data-s="">.css-8fpxuc-MuiInputLabel-root{display:block;transform-origin:top left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;position:absolute;left:0;top:0;-webkit-transform:translate(0, 20px) scale(1);-moz-transform:translate(0, 20px) scale(1);-ms-transform:translate(0, 20px) scale(1);transform:translate(0, 20px) scale(1);-webkit-transform:translate(0, 17px) scale(1);-moz-transform:translate(0, 17px) scale(1);-ms-transform:translate(0, 17px) scale(1);transform:translate(0, 17px) scale(1);-webkit-transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;z-index:1;pointer-events:none;-webkit-transform:translate(14px, 16px) scale(1);-moz-transform:translate(14px, 16px) scale(1);-ms-transform:translate(14px, 16px) scale(1);transform:translate(14px, 16px) scale(1);max-width:calc(100% - 24px);-webkit-transform:translate(14px, 9px) scale(1);-moz-transform:translate(14px, 9px) scale(1);-ms-transform:translate(14px, 9px) scale(1);transform:translate(14px, 9px) scale(1);}</style><style data-emotion="css" data-s="">.css-8voplp-MuiFormLabel-root-MuiInputLabel-root{color:rgba(0, 0, 0, 0.6);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;letter-spacing:0.00938em;padding:0;position:relative;display:block;transform-origin:top left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;position:absolute;left:0;top:0;-webkit-transform:translate(0, 20px) scale(1);-moz-transform:translate(0, 20px) scale(1);-ms-transform:translate(0, 20px) scale(1);transform:translate(0, 20px) scale(1);-webkit-transform:translate(0, 17px) scale(1);-moz-transform:translate(0, 17px) scale(1);-ms-transform:translate(0, 17px) scale(1);transform:translate(0, 17px) scale(1);-webkit-transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;z-index:1;pointer-events:none;-webkit-transform:translate(14px, 16px) scale(1);-moz-transform:translate(14px, 16px) scale(1);-ms-transform:translate(14px, 16px) scale(1);transform:translate(14px, 16px) scale(1);max-width:calc(100% - 24px);-webkit-transform:translate(14px, 9px) scale(1);-moz-transform:translate(14px, 9px) scale(1);-ms-transform:translate(14px, 9px) scale(1);transform:translate(14px, 9px) scale(1);}</style><style data-emotion="css" data-s="">.css-8voplp-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{color:#1976d2;}</style><style data-emotion="css" data-s="">.css-8voplp-MuiFormLabel-root-MuiInputLabel-root.Mui-disabled{color:rgba(0, 0, 0, 0.38);}</style><style data-emotion="css" data-s="">.css-8voplp-MuiFormLabel-root-MuiInputLabel-root.Mui-error{color:#d32f2f;}</style><style data-emotion="css" data-s="">.css-lxfshk-MuiInputBase-root-MuiOutlinedInput-root{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;letter-spacing:0.00938em;color:rgba(0, 0, 0, 0.87);box-sizing:border-box;position:relative;cursor:text;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;border-radius:4px;padding-right:14px;}</style><style data-emotion="css" data-s="">.css-lxfshk-MuiInputBase-root-MuiOutlinedInput-root.Mui-disabled{color:rgba(0, 0, 0, 0.38);cursor:default;}</style><style data-emotion="css" data-s="">.css-lxfshk-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{border-color:rgba(0, 0, 0, 0.87);}</style><style data-emotion="css" data-s="">.css-lxfshk-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{border-width:2px;}</style><style data-emotion="css" data-s="">.css-lxfshk-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{border-color:#1976d2;}</style><style data-emotion="css" data-s="">@media (hover: none){.css-lxfshk-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{border-color:rgba(0, 0, 0, 0.23);}}</style><style data-emotion="css" data-s="">.css-lxfshk-MuiInputBase-root-MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline{border-color:#d32f2f;}</style><style data-emotion="css" data-s="">.css-lxfshk-MuiInputBase-root-MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline{border-color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input{font:inherit;letter-spacing:inherit;color:currentColor;padding:4px 0 5px;border:0;box-sizing:content-box;background:none;height:1.4375em;margin:0;-webkit-tap-highlight-color:transparent;display:block;min-width:0;width:100%;-webkit-animation-name:mui-auto-fill-cancel;animation-name:mui-auto-fill-cancel;-webkit-animation-duration:10ms;animation-duration:10ms;padding-top:1px;padding:16.5px 14px;padding:8.5px 14px;padding-right:0;}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input::-webkit-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input::-moz-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input::-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:focus{outline:0;}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:invalid{box-shadow:none;}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input::-webkit-search-decoration{-webkit-appearance:none;}</style><style data-emotion="css" data-s="">label[data-shrink=false]+.MuiInputBase-formControl .css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input{}</style><style data-emotion="css" data-s="">label[data-shrink=false]+.MuiInputBase-formControl .css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input::-webkit-input-placeholder{opacity:0!important;}</style><style data-emotion="css" data-s="">label[data-shrink=false]+.MuiInputBase-formControl .css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input::-moz-placeholder{opacity:0!important;}</style><style data-emotion="css" data-s="">label[data-shrink=false]+.MuiInputBase-formControl .css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input::-ms-input-placeholder{opacity:0!important;}</style><style data-emotion="css" data-s="">label[data-shrink=false]+.MuiInputBase-formControl .css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:focus::-webkit-input-placeholder{opacity:0.42;}</style><style data-emotion="css" data-s="">label[data-shrink=false]+.MuiInputBase-formControl .css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:focus::-moz-placeholder{opacity:0.42;}</style><style data-emotion="css" data-s="">label[data-shrink=false]+.MuiInputBase-formControl .css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:focus::-ms-input-placeholder{opacity:0.42;}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input.Mui-disabled{opacity:1;-webkit-text-fill-color:rgba(0, 0, 0, 0.38);}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill{-webkit-animation-duration:5000s;animation-duration:5000s;-webkit-animation-name:mui-auto-fill;animation-name:mui-auto-fill;}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill{border-radius:inherit;}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill WebkitBoxShadow{}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill WebkitTextFillColor{}</style><style data-emotion="css" data-s="">.css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill caretColor{}</style><style data-emotion="css" data-s="">.css-1i2hsuj-MuiInputAdornment-root{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;max-height:2em;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;white-space:nowrap;color:rgba(0, 0, 0, 0.54);margin-left:8px;}</style><style data-emotion="css" data-s="">.css-elxu23-MuiIconButton-root{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}</style><style data-emotion="css" data-s="">.css-elxu23-MuiIconButton-root:hover{background-color:rgba(0, 0, 0, 0.04);}</style><style data-emotion="css" data-s="">@media (hover: none){.css-elxu23-MuiIconButton-root:hover{background-color:transparent;}}</style><style data-emotion="css" data-s="">.css-elxu23-MuiIconButton-root.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css" data-s="">.css-1wjzr1s-MuiButtonBase-root-MuiIconButton-root{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}</style><style data-emotion="css" data-s="">.css-1wjzr1s-MuiButtonBase-root-MuiIconButton-root::-moz-focus-inner{border-style:none;}</style><style data-emotion="css" data-s="">.css-1wjzr1s-MuiButtonBase-root-MuiIconButton-root.Mui-disabled{pointer-events:none;cursor:default;}</style><style data-emotion="css" data-s="">@media print{.css-1wjzr1s-MuiButtonBase-root-MuiIconButton-root{-webkit-print-color-adjust:exact;color-adjust:exact;}}</style><style data-emotion="css" data-s="">.css-1wjzr1s-MuiButtonBase-root-MuiIconButton-root:hover{background-color:rgba(0, 0, 0, 0.04);}</style><style data-emotion="css" data-s="">@media (hover: none){.css-1wjzr1s-MuiButtonBase-root-MuiIconButton-root:hover{background-color:transparent;}}</style><style data-emotion="css" data-s="">.css-1wjzr1s-MuiButtonBase-root-MuiIconButton-root.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css" data-s="">.css-20bmp1-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;fill:currentColor;font-size:1.5rem;}</style><style data-emotion="css" data-s="">.css-rki20w-MuiOutlinedInput-notchedOutline{border-color:rgba(0, 0, 0, 0.23);}</style><style data-emotion="css" data-s="">.css-1d3z3hw-MuiOutlinedInput-notchedOutline{text-align:left;position:absolute;bottom:0;right:0;top:-5px;left:0;margin:0;padding:0 8px;pointer-events:none;border-radius:inherit;border-style:solid;border-width:1px;overflow:hidden;min-width:0%;border-color:rgba(0, 0, 0, 0.23);}</style><style data-emotion="css" data-s="">.css-1pbc52w{float:unset;width:auto;overflow:hidden;display:block;padding:0;height:11px;font-size:0.75em;visibility:hidden;max-width:0.01px;-webkit-transition:max-width 50ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:max-width 50ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;white-space:nowrap;}</style><style data-emotion="css" data-s="">.css-1pbc52w>span{padding-left:5px;padding-right:5px;display:inline-block;opacity:0;visibility:visible;}</style><style data-emotion="css" data-s="">.css-1oy15se-MuiInputLabel-root{display:block;transform-origin:top left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;position:absolute;left:0;top:0;-webkit-transform:translate(0, 20px) scale(1);-moz-transform:translate(0, 20px) scale(1);-ms-transform:translate(0, 20px) scale(1);transform:translate(0, 20px) scale(1);-webkit-transform:translate(0, 17px) scale(1);-moz-transform:translate(0, 17px) scale(1);-ms-transform:translate(0, 17px) scale(1);transform:translate(0, 17px) scale(1);-webkit-transform:translate(0, -1.5px) scale(0.75);-moz-transform:translate(0, -1.5px) scale(0.75);-ms-transform:translate(0, -1.5px) scale(0.75);transform:translate(0, -1.5px) scale(0.75);transform-origin:top left;max-width:133%;-webkit-transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;z-index:1;pointer-events:none;-webkit-transform:translate(14px, 16px) scale(1);-moz-transform:translate(14px, 16px) scale(1);-ms-transform:translate(14px, 16px) scale(1);transform:translate(14px, 16px) scale(1);max-width:calc(100% - 24px);-webkit-transform:translate(14px, 9px) scale(1);-moz-transform:translate(14px, 9px) scale(1);-ms-transform:translate(14px, 9px) scale(1);transform:translate(14px, 9px) scale(1);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:auto;max-width:calc(133% - 32px);-webkit-transform:translate(14px, -9px) scale(0.75);-moz-transform:translate(14px, -9px) scale(0.75);-ms-transform:translate(14px, -9px) scale(0.75);transform:translate(14px, -9px) scale(0.75);}</style><style data-emotion="css" data-s="">.css-1huaqfz-MuiFormLabel-root-MuiInputLabel-root{color:rgba(0, 0, 0, 0.6);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;letter-spacing:0.00938em;padding:0;position:relative;display:block;transform-origin:top left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;position:absolute;left:0;top:0;-webkit-transform:translate(0, 20px) scale(1);-moz-transform:translate(0, 20px) scale(1);-ms-transform:translate(0, 20px) scale(1);transform:translate(0, 20px) scale(1);-webkit-transform:translate(0, 17px) scale(1);-moz-transform:translate(0, 17px) scale(1);-ms-transform:translate(0, 17px) scale(1);transform:translate(0, 17px) scale(1);-webkit-transform:translate(0, -1.5px) scale(0.75);-moz-transform:translate(0, -1.5px) scale(0.75);-ms-transform:translate(0, -1.5px) scale(0.75);transform:translate(0, -1.5px) scale(0.75);transform-origin:top left;max-width:133%;-webkit-transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;z-index:1;pointer-events:none;-webkit-transform:translate(14px, 16px) scale(1);-moz-transform:translate(14px, 16px) scale(1);-ms-transform:translate(14px, 16px) scale(1);transform:translate(14px, 16px) scale(1);max-width:calc(100% - 24px);-webkit-transform:translate(14px, 9px) scale(1);-moz-transform:translate(14px, 9px) scale(1);-ms-transform:translate(14px, 9px) scale(1);transform:translate(14px, 9px) scale(1);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:auto;max-width:calc(133% - 32px);-webkit-transform:translate(14px, -9px) scale(0.75);-moz-transform:translate(14px, -9px) scale(0.75);-ms-transform:translate(14px, -9px) scale(0.75);transform:translate(14px, -9px) scale(0.75);}</style><style data-emotion="css" data-s="">.css-1huaqfz-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{color:#1976d2;}</style><style data-emotion="css" data-s="">.css-1huaqfz-MuiFormLabel-root-MuiInputLabel-root.Mui-disabled{color:rgba(0, 0, 0, 0.38);}</style><style data-emotion="css" data-s="">.css-1huaqfz-MuiFormLabel-root-MuiInputLabel-root.Mui-error{color:#d32f2f;}</style><style data-emotion="css" data-s="">.css-kg5swy{float:unset;width:auto;overflow:hidden;display:block;padding:0;height:11px;font-size:0.75em;visibility:hidden;max-width:0.01px;-webkit-transition:max-width 50ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:max-width 50ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;white-space:nowrap;max-width:100%;-webkit-transition:max-width 100ms cubic-bezier(0.0, 0, 0.2, 1) 50ms;transition:max-width 100ms cubic-bezier(0.0, 0, 0.2, 1) 50ms;}</style><style data-emotion="css" data-s="">.css-kg5swy>span{padding-left:5px;padding-right:5px;display:inline-block;opacity:0;visibility:visible;}</style><style data-emotion="css" data-s="">.css-8je8zh-MuiTouchRipple-root{overflow:hidden;pointer-events:none;position:absolute;z-index:0;top:0;right:0;bottom:0;left:0;border-radius:inherit;}</style><style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple{opacity:0;position:absolute;}</style><style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple.MuiTouchRipple-rippleVisible{opacity:0.3;-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-animation-name:animation-1taevns;animation-name:animation-1taevns;-webkit-animation-duration:550ms;animation-duration:550ms;-webkit-animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);}</style><style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple.MuiTouchRipple-ripplePulsate{-webkit-animation-duration:200ms;animation-duration:200ms;}</style><style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple .MuiTouchRipple-child{opacity:1;display:block;width:100%;height:100%;border-radius:50%;background-color:currentColor;}</style><style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple .MuiTouchRipple-childLeaving{opacity:0;-webkit-animation-name:animation-5ich1p;animation-name:animation-5ich1p;-webkit-animation-duration:550ms;animation-duration:550ms;-webkit-animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);}</style><style data-emotion="css" data-s="">.css-y4cjyz-MuiTouchRipple-ripple .MuiTouchRipple-childPulsate{position:absolute;left:0px;top:0;-webkit-animation-name:animation-f6tr5a;animation-name:animation-f6tr5a;-webkit-animation-duration:2500ms;animation-duration:2500ms;-webkit-animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-delay:200ms;animation-delay:200ms;}</style><style data-emotion="css" data-s="">@-webkit-keyframes animation-f6tr5a{0%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}50%{-webkit-transform:scale(0.92);-moz-transform:scale(0.92);-ms-transform:scale(0.92);transform:scale(0.92);}100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}</style><style data-emotion="css" data-s="">@keyframes animation-f6tr5a{0%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}50%{-webkit-transform:scale(0.92);-moz-transform:scale(0.92);-ms-transform:scale(0.92);transform:scale(0.92);}100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}</style><style data-emotion="css" data-s="">@-webkit-keyframes animation-5ich1p{0%{opacity:1;}100%{opacity:0;}}</style><style data-emotion="css" data-s="">@keyframes animation-5ich1p{0%{opacity:1;}100%{opacity:0;}}</style><style data-emotion="css" data-s="">@-webkit-keyframes animation-1taevns{0%{-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);transform:scale(0);opacity:0.1;}100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:0.3;}}</style><style data-emotion="css" data-s="">@keyframes animation-1taevns{0%{-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);transform:scale(0);opacity:0.1;}100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:0.3;}}</style></head>
+  <body>
+    <div id="root"><div class="flex flex-col items-center"><h1>Weather App</h1><div class="flex flex-col items-center gap-20 "><div class="MuiFormControl-root  MuiTextField-root  css-e1ak92-MuiFormControl-root-MuiTextField-root"><label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined  MuiFormLabel-colorPrimary MuiFormLabel-filled  MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined  css-1huaqfz-MuiFormLabel-root-MuiInputLabel-root" data-shrink="true" for="outlined-basic" id="outlined-basic-label">Enter a City</label><div class="MuiInputBase-root MuiOutlinedInput-root  MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedEnd  css-lxfshk-MuiInputBase-root-MuiOutlinedInput-root"><input aria-invalid="false" id="outlined-basic" type="text" class="MuiInputBase-input MuiOutlinedInput-input  MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedEnd  css-1df20ln-MuiInputBase-input-MuiOutlinedInput-input" value="washington"><div class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeSmall  css-1i2hsuj-MuiInputAdornment-root"><button class="MuiButtonBase-root  MuiIconButton-root MuiIconButton-sizeMedium  css-1wjzr1s-MuiButtonBase-root-MuiIconButton-root" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium  css-20bmp1-MuiSvgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SearchIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg><span class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button></div><fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline  css-1d3z3hw-MuiOutlinedInput-notchedOutline"><legend class="css-kg5swy"><span>Enter a City</span></legend></fieldset></div></div><div class="border-2 h-80 rounded-lg w-full bg-gradient-to-r from-teal-200 to-blue-200 flex  items-center"><div class="w-2/4 flex justify-center"><img src="./Vite + React_files/116.png" alt="" class="w-40 h-40"></div><div><h2>2024-08-29 05:23</h2><h3>Washington, District of Columbia United States of America</h3><h2>26.7 ℃</h2></div></div></div></div></div>
+    <script type="module" src="./Vite + React_files/main.jsx"></script>
+  
+
+</body></html>

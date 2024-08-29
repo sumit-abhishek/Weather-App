@@ -1,6 +1,5 @@
 import WeatherInput from "./components/WeatherInput";
 import WeatherCard from "./components/WeatherCard";
-import Button from "./components/Button";
 import { useWeather } from "./context/WeatherContext";
 import "./App.css";
 import { useEffect } from "react";
@@ -12,12 +11,13 @@ function App() {
   }, []);
   const weather = useWeather();
   return (
-    <>
+    <div className="flex flex-col items-center">
       <h1>Weather App</h1>
-      <WeatherInput />
-      <Button value="Search" onClick={weather.fetchData} />
-      <WeatherCard />
-    </>
+      <div className="flex flex-col items-center gap-20 ">
+        <WeatherInput />
+        <WeatherCard />
+      </div>
+    </div>
   );
 }
 
